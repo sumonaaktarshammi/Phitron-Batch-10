@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main()
+{
+    int n;
+    scanf("%d", &n);
+
+    int a[n];
+    for (int i = 0; i < n; i++)
+    { 
+        scanf("%d", &a[i]);
+    }
+
+    int indx;
+    scanf("%d", &indx);
+
+    for( int i = indx ; i < n-1 ; i++) 
+    {
+        a[i] = a[i+1];
+    }
+    
+    n--; // n er man 1 kom
+
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", a[i]);
+    }
+    return 0;
+}
